@@ -80,3 +80,71 @@ Assistant: The date is 11th of August of year 2025
 User: Open website
 Assistant: Which website would you like me to open?
 ```
+
+
+
+# BMI Calculator 🧮
+
+A Python program to calculate **Body Mass Index (BMI)** with **realistic input limits** and robust **exception handling**.
+
+---
+
+## 📌 Features
+- Takes **weight (kg)** and **height (m)** from the user
+- Validates:
+  - ✅ Non-numeric inputs
+  - ✅ Blank or whitespace inputs
+  - ✅ Negative or zero values
+  - ✅ Unrealistic values (Weight: 10–300 kg, Height: 0.5–2.5 m)
+- Categorizes BMI into:
+  - Underweight
+  - Healthy (Normal Weight)
+  - Overweight
+  - Obese (with Obesity Classes I, II, and III)
+- Keeps prompting until valid values are entered
+
+## 🧠 BMI Categories Reference
+
+| BMI Value     | Category                       |
+|---------------|--------------------------------|
+| < 18.5        | Underweight                    |
+| 18.5 – 24.9   | Healthy (Normal Weight)        |
+| 25 – 29.9     | Overweight                     |
+| 30 – 34.9     | Obesity Class I                |
+| 35 – 39.9     | Obesity Class II               |
+| ≥ 40          | Obesity Class III (Severe)     |
+
+## 📂 Code Overview
+- Main function: Handles the whole process
+- take_input() → Handles user input with:
+  - try-except blocks for exception handling
+  - Validation for positive numeric values
+  - Range checks for realistic data
+- BMI Calculation:
+```
+bmi = w / (h ** 2)
+```
+- BMI Categorization: Uses conditional statements to determine BMI category.
+
+---
+
+## 🖥️ How to Run
+1. **Clone this repository** or download the Python file:
+   ```
+   git clone https://github.com/yourusername/bmi-calculator.git
+   cd bmi-calculator
+   ```
+2. Run the program in your terminal:
+   ```
+   python bmi_calculator.py
+   ```
+
+##📜 Example Output
+```
+Enter your weight (in kg): 72
+Enter your height (in m): 1.78
+
+Your Body Mass Index is: 22.72
+Your BMI Category is:
+You are Healthy (Normal Weight)!
+```
