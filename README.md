@@ -1,7 +1,11 @@
-# 🗣 Smart Voice Assistant
+# Python Programming Internship @OasisInfobyte
+---
+---
+---
+## Task-1: 🗣 Smart Voice Assistant
 A Python-based voice-controlled assistant that can respond to greetings, tell the time/date, search Google/Wikipedia, open selected websites, send emails, and more — all through simple voice commands.
 
-## 📌 Features
+### 📌 Features
 - Responds to greetings like *"Hello"* 👋
 - Tells you the *current time* ⏰
 - Tells you the *current date* 📅
@@ -9,10 +13,10 @@ A Python-based voice-controlled assistant that can respond to greetings, tell th
 - Opens selected websites (*Google, YouTube, LinkedIn*) 🌐
 - Sends emails through voice commands ✉
 - Ends session when you say *"Goodbye"* or *"No Thanks"* 🚪
-
+  
 ---
 
-## 📦 Modules Used and Their Purpose
+### 📦 Modules Used and Their Purpose
 
 | Module | Purpose |
 |--------|---------|
@@ -27,7 +31,7 @@ A Python-based voice-controlled assistant that can respond to greetings, tell th
 
 ---
 
-## ⚙ Functions in the Project
+### ⚙ Functions in the Project
 
 | Function | Description |
 |----------|-------------|
@@ -45,7 +49,7 @@ A Python-based voice-controlled assistant that can respond to greetings, tell th
 
 ---
 
-## 🚀 How to Run
+### 🚀 How to Run
 
 1. *Install Python* (v3.8 or above recommended)
 2. *Install the required modules* using pip:
@@ -68,7 +72,7 @@ A Python-based voice-controlled assistant that can respond to greetings, tell th
 
 ---
 
-## 💡 Example Usage
+### 💡 Example Usage
 
 ```
 User: Hello
@@ -83,13 +87,13 @@ Assistant: Which website would you like me to open?
 ---
 ---
 ---
-# BMI Calculator 🧮
+## Task-2: BMI Calculator 🧮
 
 A Python program to calculate **Body Mass Index (BMI)** with **realistic input limits** and robust **exception handling**.
 
 ---
 
-## 📌 Features
+### 📌 Features
 - Takes **weight (kg)** and **height (m)** from the user
 - Validates:
   - ✅ Non-numeric inputs
@@ -102,8 +106,8 @@ A Python program to calculate **Body Mass Index (BMI)** with **realistic input l
   - Overweight
   - Obese (with Obesity Classes I, II, and III)
 - Keeps prompting until valid values are entered
-
-## 🧠 BMI Categories Reference
+---
+### 🧠 BMI Categories Reference
 
 | BMI Value     | Category                       |
 |---------------|--------------------------------|
@@ -113,8 +117,8 @@ A Python program to calculate **Body Mass Index (BMI)** with **realistic input l
 | 30 – 34.9     | Obesity Class I                |
 | 35 – 39.9     | Obesity Class II               |
 | ≥ 40          | Obesity Class III (Severe)     |
-
-## 📂 Code Overview
+---
+### 📂 Code Overview
 - Main function: Handles the whole process
 - take_input() → Handles user input with:
   - try-except blocks for exception handling
@@ -128,7 +132,7 @@ bmi = w / (h ** 2)
 
 ---
 
-## 🖥️ How to Run
+### 🖥️ How to Run
 1. **Clone this repository** or download the Python file:
    ```
    git clone https://github.com/yourusername/bmi-calculator.git
@@ -138,8 +142,8 @@ bmi = w / (h ** 2)
    ```
    python bmi_calculator.py
    ```
-
-##📜 Example Output
+---
+### 📜 Example Output
 ```
 Enter your weight (in kg): 72
 Enter your height (in m): 1.78
@@ -151,14 +155,14 @@ You are Healthy (Normal Weight)!
 ---
 ---
 ---
-# 🔐 Random Password Generator
+## Task-3: 🔐 Random Password Generator
 
 A simple Python program to generate **random secure passwords** based on user preferences for letters, numbers, and symbols.  
 The program includes **basic exception handling** to avoid crashes when users enter invalid inputs.
 
 ---
 
-## 📌 Features
+### 📌 Features
 - User specifies:
   - Password length
   - Whether to include **letters**
@@ -169,8 +173,8 @@ The program includes **basic exception handling** to avoid crashes when users en
   - Ensures options are `1 (Yes)` or `0 (No)`
   - At least one character type must be selected
 - Generates a password of the requested length using the selected character sets
-
-## 📂 Code Overview
+---
+### 📂 Code Overview
 - Main function: Handles the whole process
 - pw_specs() → Handles user input with try-except for invalid integers.
   - Validates only 0/1 for choices
@@ -182,7 +186,7 @@ for i in range(length):
 ```
 ---
 
-## 🖥️ How to Run
+### 🖥️ How to Run
 1. Clone this repository or download the Python file:
    ```
    git clone https://github.com/yourusername/password-generator.git
@@ -192,8 +196,8 @@ for i in range(length):
    ```
    python password_generator.py
    ```
-
-## 📜 Example Output
+---
+### 📜 Example Output
    ```
    Enter the length of your password: 10
    Do you want letters in your password? (1 for Yes, 0 for No): 1
@@ -202,3 +206,106 @@ for i in range(length):
 
    Your random generated password of length 10 is: kF2hT8wLpQ
    ```
+---
+---
+---
+## Task-4: 🌦️ Voice-Powered Weather App
+
+This is a Python-based Weather Application that uses the **functions from Task 1 (Smart Voice Assistant)** to fetch real-time weather data from the [OpenWeatherMap API](https://openweathermap.org/api) and **speak it aloud to the user**.  
+
+You can simply say the **city name**, and the app will fetch and narrate details like temperature, weather condition, humidity, and wind speed.
+
+---
+
+### 📌 Features
+- Takes **voice input** of the city name 🎤  
+- Fetches **real-time weather data** from OpenWeatherMap 🌍  
+- Speaks out:  
+  - City & Country  
+  - Temperature (Current, Feels Like, Min, Max) 🌡️  
+  - Weather Type & Description ☁️  
+  - Humidity 💧  
+  - Wind Speed 💨  
+- Error handling for invalid requests ❌  
+
+---
+
+### 📦 Modules Used
+
+| Module | Purpose |
+|--------|---------|
+| `requests` | To make HTTP requests to the OpenWeatherMap API |
+| `Voice_Assistant (pns, listen)` | Functions reused from Task 1 for speaking and listening |
+| `json` (via requests) | Parse weather data from API response |
+
+---
+
+### ⚙️ How It Works
+1. The app asks you to **speak the city name**.  
+2. It sends the request to the **OpenWeatherMap API**.  
+3. API returns the weather details in JSON format.  
+4. The program extracts and **speaks the details** to the user.  
+
+---
+
+### 🔑 Getting Your Own API Key
+To use this project, you need an API key from OpenWeatherMap.  
+
+1. Go to 👉 [OpenWeatherMap](https://home.openweathermap.org/users/sign_up)  
+2. Create a free account and log in.  
+3. Navigate to the **API Keys** section in your profile.  
+4. Copy your **API Key**.  
+5. Replace `<Your-API-Key>` in the code with your actual key:
+   ```
+   API_KEY = "your_api_key_here"
+   ```
+
+---
+
+### 🚀 How to Run
+1. Install Python (v3.8 or higher recommended).
+2. Install the required module:
+   ```
+   pip install requests
+   ```
+3. Make sure you have the Voice_Assistant project from Task 1 (for pns and listen functions).
+4. Save the file as weather_app.py.
+5. Run the program:
+   ```
+   python weather_app.py
+   ```
+6. Speak the city name when prompted. 🎙️
+
+---
+
+### 💡 Example Usage
+   ```
+Assistant: Tell the city name whose weather to search:  
+User: London  
+
+Assistant:  
+Weather in London, GB:  
+Temperature: 18°C  
+Feels like: 16°C  
+Minimum Temperature: 15°C  
+Maximum Temperature: 20°C  
+Weather Type: Clouds  
+Weather Condition: Scattered Clouds  
+Humidity: 72%  
+Wind Speed: 3.5 metres per second  
+   ```
+
+---
+
+### 🛡 Notes
+- Requires an internet connection to fetch live data.
+- Make sure your microphone is working for voice input.
+
+---
+
+### 📜 License
+   This project is open-source and free to use for learning purposes.
+
+---
+---
+---
