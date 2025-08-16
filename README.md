@@ -80,9 +80,9 @@ Assistant: The date is 11th of August of year 2025
 User: Open website
 Assistant: Which website would you like me to open?
 ```
-
-
-
+---
+---
+---
 # BMI Calculator 🧮
 
 A Python program to calculate **Body Mass Index (BMI)** with **realistic input limits** and robust **exception handling**.
@@ -95,7 +95,7 @@ A Python program to calculate **Body Mass Index (BMI)** with **realistic input l
   - ✅ Non-numeric inputs
   - ✅ Blank or whitespace inputs
   - ✅ Negative or zero values
-  - ✅ Unrealistic values (Weight: 10–300 kg, Height: 0.5–2.5 m)
+  - ✅ Unrealistic values (Weight: 5–200 kg, Height: 0.2–2.5 m)
 - Categorizes BMI into:
   - Underweight
   - Healthy (Normal Weight)
@@ -148,3 +148,57 @@ Your Body Mass Index is: 22.72
 Your BMI Category is:
 You are Healthy (Normal Weight)!
 ```
+---
+---
+---
+# 🔐 Random Password Generator
+
+A simple Python program to generate **random secure passwords** based on user preferences for letters, numbers, and symbols.  
+The program includes **basic exception handling** to avoid crashes when users enter invalid inputs.
+
+---
+
+## 📌 Features
+- User specifies:
+  - Password length
+  - Whether to include **letters**
+  - Whether to include **numbers**
+  - Whether to include **symbols**
+- Validates inputs:
+  - Ensures only integers are entered
+  - Ensures options are `1 (Yes)` or `0 (No)`
+  - At least one character type must be selected
+- Generates a password of the requested length using the selected character sets
+
+## 📂 Code Overview
+- Main function: Handles the whole process
+- pw_specs() → Handles user input with try-except for invalid integers.
+  - Validates only 0/1 for choices
+  - Ensures at least one option is selected
+- Password Generation:
+```
+for i in range(length):
+    password += random.choice(choices)
+```
+---
+
+## 🖥️ How to Run
+1. Clone this repository or download the Python file:
+   ```
+   git clone https://github.com/yourusername/password-generator.git
+   cd password-generator
+   ```
+2. Run the script:
+   ```
+   python password_generator.py
+   ```
+
+## 📜 Example Output
+   ```
+   Enter the length of your password: 10
+   Do you want letters in your password? (1 for Yes, 0 for No): 1
+   Do you want numbers in your password? (1 for Yes, 0 for No): 1
+   Do you want symbols in your password? (1 for Yes, 0 for No): 0
+
+   Your random generated password of length 10 is: kF2hT8wLpQ
+   ```
